@@ -16,14 +16,6 @@ export interface SearchManuFacturerProps {
 }
 
 export interface CarProps {
-  // model: string;
-  // make: string;
-  // mpg: number;
-  // transmission: string;
-  // year: number;
-  // drive: string;
-  // cityMPG: number;
-
   city_mpg: number;
   class: string;
   combination_mpg: number;
@@ -36,4 +28,26 @@ export interface CarProps {
   model: string;
   transmission: string;
   year: number;
+}
+
+export interface FilterProps {
+  manufacturer?: string;
+  year?: number;
+  model?: string;
+  limit?: number;
+  fuel?: string;
+}
+
+export interface HomeProps {
+  searchParams: FilterProps;
+}
+
+export interface OptionProps {
+  title: string;
+  value: string;
+}
+
+export interface CustomFilterProps {
+  title: string;
+  options: OptionProps[];
 }
